@@ -5,6 +5,9 @@ Compose in Android. Each sample contains the code for a specific Compose codelab
 
 For more information about Jetpack Compose, please [read the documentation](https://developer.android.com/jetpack/compose)
 
+- Main branch -> working branch
+- End branch -> solution branch
+
 ## 💻 Requirements
 
 [Latest version of Android Studio](https://developer.android.com/studio).
