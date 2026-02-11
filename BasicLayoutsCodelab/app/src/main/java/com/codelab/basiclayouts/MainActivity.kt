@@ -22,7 +22,6 @@ import androidx.activity.compose.setContent
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -33,7 +32,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.paddingFromBaseline
-import androidx.compose.foundation.layout.safeContentPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
@@ -221,8 +219,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
     Column(modifier = modifier.verticalScroll(rememberScrollState())) {
         Spacer(Modifier.height(16.dp))
         SearchBar(Modifier.padding(horizontal = 16.dp))
-        HomeSection(title = R.string.align_your_body, content = {AlignYourBodyRow()})
-        HomeSection(title = R.string.favorite_collections, content = {FavoriteCollectionsGrid()})
+        HomeSection(title = R.string.align_your_body, content = { AlignYourBodyRow() })
+        HomeSection(title = R.string.favorite_collections, content = { FavoriteCollectionsGrid() })
         Spacer(Modifier.height(16.dp))
     }
 }
@@ -232,14 +230,14 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 private fun SootheBottomNavigation(modifier: Modifier = Modifier) {
     NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceVariant, modifier = modifier) {
         NavigationBarItem(
-            icon = {Icon(imageVector = Icons.Default.Spa, contentDescription = null)},
-            label = {Text(text = stringResource(R.string.bottom_navigation_home))},
+            icon = { Icon(imageVector = Icons.Default.Spa, contentDescription = null) },
+            label = { Text(text = stringResource(R.string.bottom_navigation_home)) },
             selected = true,
             onClick = {}
         )
         NavigationBarItem(
-            icon = {Icon(imageVector = Icons.Default.AccountCircle, contentDescription = null)},
-            label = {Text(text = stringResource(R.string.bottom_navigation_profile))},
+            icon = { Icon(imageVector = Icons.Default.AccountCircle, contentDescription = null) },
+            label = { Text(text = stringResource(R.string.bottom_navigation_profile)) },
             selected = false,
             onClick = {}
         )
